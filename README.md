@@ -1,118 +1,81 @@
 # Quantitative Finance Lab
 
-Research and implementation of quantitative models for portfolio construction, risk management, derivatives pricing, systematic investing, and market analysis.
+A collection of quantitative finance research projects exploring portfolio construction, risk management, asset pricing, and market microstructure.
 
-This repository contains practical Python implementations of quantitative finance concepts. The goal is to build well-documented, reusable tools that connect financial theory with real-world portfolio analysis and market simulation.
+This repository serves as a laboratory for building practical tools used by quantitative researchers, portfolio managers, and systematic investors. Each project is designed to be educational, reproducible, and applicable to real-world investing.
 
-## Objectives
+---
 
-- Build quantitative finance models from first principles
-- Apply models to real and simulated portfolios
-- Develop reusable and testable Python components
-- Explore financial theory through empirical analysis
-- Create a foundation for more advanced quantitative research
+## Current Project
 
-## Projects
+### Equity Factor Model
 
-### Portfolio Risk Engine
+The first project in this repository estimates the historical factor exposures of an equity portfolio.
 
-Analyze the risk profile of a portfolio using historical market data.
+Features include:
 
-Planned features:
+- Portfolio construction from custom position weights
+- Historical price retrieval from Yahoo Finance
+- Multi-factor regression using ETF factor proxies
+- Estimated exposures to:
+  - Market
+  - Size
+  - Value
+  - Momentum
+  - Quality
+  - Low Volatility
+- Alpha estimation
+- Statistical significance (p-values)
+- R² and adjusted R²
+- CSV report generation
 
-- Position and portfolio weights
-- Historical returns
-- Annualized volatility
-- Maximum drawdown
-- Correlation and covariance analysis
-- Historical Value at Risk
-- Expected Shortfall
-- Risk contribution by position
-- Concentration analysis
-- Historical stress testing
+Example output:
 
-### Equity Factor Models
+```
+Market Beta:      0.999
+Value Exposure:  -1.163
+Quality:          0.342
+Annualized Alpha: 14.71%
+```
 
-Research and implement models used to explain asset returns.
+---
 
-Planned models:
+## Future Projects
 
-- Capital Asset Pricing Model
-- Fama-French Three-Factor Model
-- Fama-French Five-Factor Model
-- Momentum
-- Quality
-- Value
-- Size
-- Low volatility
+This repository is actively evolving. Planned research projects include:
 
-### Portfolio Optimization
+- Portfolio Risk Engine
+- Portfolio Optimizer
+- Options Pricing Engine
+- Backtesting Framework
+- Factor Investing Research
+- Risk Parity Models
+- Order Book Simulator
+- Market Making Simulator
+- Statistical Arbitrage Experiments
+- Machine Learning for Asset Returns
 
-Implement portfolio construction and asset-allocation techniques.
+Additional ideas will be added as the research evolves.
 
-Planned models:
+---
 
-- Mean-variance optimization
-- Minimum-variance portfolio
-- Maximum Sharpe ratio portfolio
-- Efficient frontier
-- Risk parity
-- Black-Litterman model
-- Portfolio constraints
-- Rebalancing analysis
+## Philosophy
 
-### Options Pricing
+The objective is not simply to recreate textbook models, but to build practical quantitative tools that improve investment decision-making while exploring modern approaches to portfolio management and financial research.
 
-Build pricing and risk models for financial derivatives.
+---
 
-Planned models:
+## Tech Stack
 
-- Black-Scholes
-- Binomial tree
-- Monte Carlo simulation
-- Implied volatility
-- Option Greeks
-- Volatility sensitivity analysis
+- Python
+- NumPy
+- Pandas
+- Statsmodels
+- yfinance
+- Pytest
 
-### Backtesting
+---
 
-Develop a framework for evaluating systematic investment strategies.
+## Disclaimer
 
-Planned features:
-
-- Historical strategy simulation
-- Benchmark comparison
-- Transaction costs
-- Portfolio rebalancing
-- Performance attribution
-- Sharpe and Sortino ratios
-- Drawdown analysis
-- Trade-level statistics
-
-### Market Microstructure
-
-Explore how financial markets process and execute orders.
-
-Planned projects:
-
-- Limit order book simulator
-- Order matching engine
-- Bid-ask spread analysis
-- Transaction cost analysis
-- Market-impact models
-- Execution algorithms
-- Market-making simulator
-
-## Repository Structure
-
-```text
-quantitative-finance-lab/
-├── portfolio-risk-engine/
-├── factor-models/
-├── portfolio-optimization/
-├── options-pricing/
-├── backtesting/
-├── market-microstructure/
-├── shared/
-├── tests/
-└── README.md
+This project is intended for educational and research purposes only and should not be considered investment advice.
